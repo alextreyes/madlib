@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Madlibs</title>
+  </head>
+  <body>
+    <header>
+      <h1>Madlibs</h1>
+    </header>
+    <form action="/story">
+      {% for prompt in story_prompts%}
+      <label for="{{prompt}}">{{prompt}}</label>
+      <input type="text" name="{{prompt}}" />
+      <br /><br />
+      {%endfor %}
+
+      <!-- <label for="place">place:</label>
+      <input type="text" name="place" />
+      <br /><br />
+
+      <label for="noun">noun:</label>
+      <input type="text" name="noun" />
+      <br /><br />
+
+      <label for="verb">verb:</label>
+      <input type="text" name="place" />
+      <br /><br />
+
+      <label for="adj">adjective:</label>
+      <input type="text" name="adj" />
+      <br /><br />
+
+      <label for="plural">plural_noun:</label>
+      <input type="text" name="plural" />
+      <br /><br /> -->
+
+      <button>Submit!</button>
+    </form>
+  </body>
+</html>
+
